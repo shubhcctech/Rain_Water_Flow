@@ -37,12 +37,12 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>6.6.2_msvc2019_64</QtInstall>
+    <QtInstall>6.6.2</QtInstall>
     <QtModules>core;gui;opengl;openglwidgets;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>6.6.1_msvc2019_64</QtInstall>
+    <QtInstall>6.6.2</QtInstall>
     <QtModules>core;gui;opengl;openglwidgets;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -99,12 +99,14 @@
     </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MaxFlowPathFinder.h" />
     <ClInclude Include="STL_Reader.h" />
     <ClInclude Include="Triangles.h" />
     <ClInclude Include="Triangulations.h" />
     <ClInclude Include="Vertices_Writer.h" />
     <QtRcc Include="Visualizer.qrc" />
     <QtMoc Include="Visualizer.h" />
+    <ClCompile Include="MaxFlowPathFinder.cpp" />
     <ClCompile Include="OpenGLWindow.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="STL_Reader.cpp" />

@@ -9,6 +9,7 @@
 #include <iostream>
 #include "STL_Reader.h"
 #include "Vertices_Writer.h"
+#include "MaxFlowPathFinder.h"
 
 
 OpenGLWindow::OpenGLWindow(const QColor& background, QMainWindow* parent) :
@@ -44,6 +45,7 @@ void OpenGLWindow::paintGL()
     QVector<GLdouble> vertices;
     STL_Reader reader;
     Vertices_Writer writer;
+    MaxFlowPathFinder flow;
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -59,6 +61,7 @@ void OpenGLWindow::paintGL()
     mProgram->setUniformValue(m_matrixUniform, matrix);
     triangulation = reader.stlReader();
     vertices = writer.vertices_Writer(triangulation);
+    QVector <Point3D> ver = flow.findMaxFlowPath(triangulation);
     
    
     
