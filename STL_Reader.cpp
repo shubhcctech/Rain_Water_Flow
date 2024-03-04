@@ -19,7 +19,7 @@ STL_Reader::~STL_Reader() {}
 // Reads stl File.
 Triangulations& STL_Reader::stlReader()
 {
-    std::ifstream inputFile("D:\\Shubham_Workspace\\CPP\\Assignments\\FileReader\\STL_Reader\\resources\\cube.stl");
+    std::ifstream inputFile("C:\\Users\\Shubham\\Downloads\\Terrain (1).stl");
     Triangulations& triangulations = Triangulations::getInstance();
     if (!inputFile.is_open())
     {
