@@ -81,7 +81,7 @@ void OpenGLWindow::paintGL()
     glEnableVertexAttribArray(m_posAttr);
     glEnableVertexAttribArray(m_colAttr);
 
-    glLineWidth(5.0f);
+    glLineWidth(2.0f);
     glDrawArrays(GL_LINE_STRIP, 0, waterFlow.size()/3);
     glLineWidth(1.0f);
 
